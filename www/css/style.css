@@ -9,11 +9,6 @@ button{
     border-radius:20px;
 }
 
-#btnA{
-    background-color: yellow;
-    color:green;
-}
-
     #minuteStr {
         color: #ff0000;
         font-size: 20px;
@@ -32,6 +27,7 @@ button{
     }
 
     #remain {
+        font-weight: bold;
         color: #ff0000;
         font-size: 20px;
         text-align: center;
@@ -56,6 +52,8 @@ button{
     }
     
     #btnA {
+        background-color: yellow;
+        color:green;
         font-size: 20px;
         position:absolute; top:380px; left:2%; width:43%; height:60px; 
     }
