@@ -35,7 +35,8 @@ button{
         left:10px; right:10px;
     }
     
-    #time {
+    #time::after {
+        content:"秒";
         color: #ff0000;
         font-size: 20px;
         text-align: center;
