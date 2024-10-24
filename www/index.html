@@ -178,7 +178,7 @@
         var img = new Image();
         img.src = "ksuisbg.gif";
         img.onload = function() {
-             ctx.drawImage(img, 10, 10, 300, 300); 
+             ctx.drawImage(img, 0, 10, 340, 300); 
         };
         var audio = new Audio(); 
         audio.src = "pin.wav";
@@ -201,7 +201,7 @@
         var img = new Image();
         img.src="Stop.jpeg";
         img.onload=function(){
-            ctx.drawImage(img,0,0,200,220);
+            ctx.drawImage(img,0,10,340,292);
         };       
     }
 
@@ -242,7 +242,7 @@
   </script>
 </head>
 <body>
-    <canvas id="mycanvas" width="500" height="300">Test</canvas>
+    <canvas id="mycanvas" width="340" height="300">Test</canvas>
 
     <div id="minuteStr">〇</div>
     <div id="secondStr">〇</div>
