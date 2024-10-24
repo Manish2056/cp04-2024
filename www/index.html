@@ -99,7 +99,7 @@
         var canvas = $('#mycanvas')[0];
         var ctx = canvas.getContext('2d');
         ctx.fillStyle = 'rgba(255, 255, 255, 0.4)'; 
-        ctx.fillRect(0,0,canvas.width,canvas.height);
+        ctx.fillRect(0,10,canvas.width,canvas.height);
         var cx = canvas.width/2;
         var cy = canvas.height/2;
         var ds = second/60;
@@ -178,7 +178,7 @@
         var img = new Image();
         img.src = "ksuisbg.gif";
         img.onload = function() {
-             ctx.drawImage(img, 0, 0, 300, 300); 
+             ctx.drawImage(img, 10, 10, 300, 300); 
         };
         var audio = new Audio(); 
         audio.src = "pin.wav";
@@ -195,7 +195,14 @@
     // ButtonBがクリックされた時の処理
     function btnBClick(e){
         active=false;
-        
+
+        var canvas = $("#mycanvas")[0];
+        var ctx = canvas.getContext("2d");
+        var img = new Image();
+        img.src="Stop.jpeg";
+        img.onload=function(){
+            ctx.drawImage(img,0,0,200,220);
+        };       
     }
 
     // ButtonCがクリックされた時の処理
@@ -235,19 +242,18 @@
   </script>
 </head>
 <body>
-    <canvas id="mycanvas" width="200" height="200">Test</canvas>
+    <canvas id="mycanvas" width="500" height="300">Test</canvas>
 
     <div id="minuteStr">〇</div>
     <div id="secondStr">〇</div>
 
     <div id="remain">Remaining time</div>
     <div id="time">Time</div>
-    <div class="container">
-        <button id="btnA">Start</button>  
-        <button id="btnB">Stop</button>  
-        <button id="btnC">Set</button>  
-        <button id="btnD">Resume</button>
-    </div>
+    <button id="btnA">Start</button>
+    <button id="btnB">Stop</button>  
+    <button id="btnC">Set</button>  
+    <button id="btnD">Resume</button>
+   
     <input type="number" id="minute" value=0 >
     <input type="number" id="second" value=15 >
 </body>
