@@ -167,6 +167,7 @@
         $('#btnA').prop('disabled', false);
         $('#btnB').prop('disabled', false);
         $('#btnC').prop('disabled', false);
+        $('#btnD').prop('disabled', false);
         
     }
 
@@ -205,6 +206,15 @@
         $("#time").html("経過時間： 0");
         $("#remain").html("残り時間： " + period);
     }
+
+    //ButtonDがクリックされた時の処理
+    function btnDClick(e){
+        active=true;
+         var audio= new Audio();
+        audio.src="pin.wav";
+        audio.play();
+    }
+
     
  
     // 繰り返し実行する処理
