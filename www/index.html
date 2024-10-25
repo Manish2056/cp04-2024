@@ -199,7 +199,7 @@
         var canvas = $("#mycanvas")[0];
         var ctx = canvas.getContext("2d");
         var img = new Image();
-        img.src="Stop.jpeg";
+        img.src="stop.jpg";
         img.onload=function(){
             ctx.drawImage(img,0,10,340,292);
         };       
@@ -224,7 +224,7 @@
         var canvas = $("#mycanvas")[0];
         var ctx = canvas.getContext("2d");
         var img = new Image();
-        img.src="Almost.jpeg";
+        img.src="go.jpg";
         img.onload=function(){
             ctx.drawImage(img,0,10,340,292);
         };
@@ -243,6 +243,20 @@
             if(rest<=0){
             acitve=false;
             alarm();
+             }
+             if(rest==5){
+                active=true;
+                 var audio= new Audio();
+                audio.src="trumpet.wav";
+                audio.play();
+
+                var canvas = $("#mycanvas")[0];
+                var ctx = canvas.getContext("2d");
+                var img = new Image();
+                img.src="Almost.jpeg";
+                img.onload=function(){
+                    ctx.drawImage(img,0,10,340,292);
+                };
              }
         }
     } 
